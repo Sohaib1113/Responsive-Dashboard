@@ -48,6 +48,7 @@ body.dark{
     width: 250px;
     background-color: var(--sidebar-color);
     transition: var(--trans-05);
+    z-index: 100;
 }
 
 .sidebar.close
@@ -143,10 +144,17 @@ header .image-text .header-text{
     color: var(--sidebar-color);
     font-size: 22px;
 }
+.sidebar.close header .toggle{
+    transform: translateY(-50%)rotate(180deg);
+}
 
+body.dark .sidebar header .toggle{
+    background: #FFF;
+    color: var(--primary-color);
+}
 .sidebar .search-box{
-
     background: var(--primary-color-light);
+    border-radius: 6px;
 }
 
 .search-box input{
@@ -202,6 +210,12 @@ header .image-text .header-text{
 .menu-bar .mode i.sun{
     opacity: 0;
 }
+body.dark .menu-bar .mode i.sun{
+    opacity: 1;
+}
+body.dark .menu-bar .mode i.moon{
+    opacity: 0;
+}
 .menu-bar .mode .toggle-switch{
     right: 0;
     position: absolute;
@@ -234,6 +248,32 @@ header .image-text .header-text{
     transition: var(--trans-03);
 }
 
+.sidebar .menu{
+    margin-top: 45px;
+}
+
 body.dark .switch::before{
     left: 20px;
+}
+
+/* Main BODY */
+
+.home{
+    position: relative;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    
+    transition: var(--trans-05);
+}
+
+.home .text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 8px 40px;
+}
+.sidebar.close ~ .home{
+    left: 88px;
+    width: calc(100% - 88px);
 }
