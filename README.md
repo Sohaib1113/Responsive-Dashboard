@@ -5,6 +5,8 @@
 ## Project Overview
 
 This project is a responsive dashboard application designed using HTML, CSS, JavaScript, and jQuery. It provides a clean and modern interface with essential features suitable for various web applications. The dashboard includes a collapsible sidebar, a top navigation bar, and a main content area that adjusts seamlessly to different screen sizes.
+![Untitled design](https://github.com/user-attachments/assets/568597d1-201f-4651-8bd7-1dab7f6625e9)
+
 
 ## Features
 
