@@ -2,9 +2,13 @@
 
 > **Disclaimer:** This project is a personal creation and has been developed independently by me. I have used resources from various platforms such as Google and YouTube for learning purposes, but all the code and design are original work created by me. I have maintained records of the resources I consulted and have ensured that my work adheres to copyright laws. Therefore, no third-party copyrights should apply to this project. If you have any concerns or questions about the usage or originality of this project, please contact me directly.
 
+## Dashboard  Live Preview
+https://sohaib1113.github.io/Responsive-Dashboard/
+
 ## Project Overview
 
 This project is a responsive dashboard application designed using HTML, CSS, JavaScript, and jQuery. It provides a clean and modern interface with essential features suitable for various web applications. The dashboard includes a collapsible sidebar, a top navigation bar, and a main content area that adjusts seamlessly to different screen sizes.
+![Untitled design](https://github.com/user-attachments/assets/568597d1-201f-4651-8bd7-1dab7f6625e9)
 
 ## Features
 
