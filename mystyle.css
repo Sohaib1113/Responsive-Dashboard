@@ -280,4 +280,206 @@ body.dark .switch::before{
 
 /* ===============================DASHBAORD DESIGN CUSTOM====================================== */
 
+
+/* Navbar Container */
+header.navbar {
+    position: fixed;
+    top: 0;
+    left: 260px; /* Align with the sidebar width */
+    width: calc(100% - 260px); /* Adjust width based on sidebar width */
+    background-color: var(--primary-color-light);
+    color: var(--sidebar-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it sits above other content but behind the sidebar */
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Navbar Container on sidebar close */
+.sidebar.close ~ .home header.navbar {
+    left: 100px;
+    width: calc(100% - 100px);
+}
+
+/* Navbar Elements */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo {
+    height: 40px; /* Adjust as needed */
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu a {
+    color: #18191A;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--trans-02);
+}
+
+.navbar-menu a:hover {
+    color: var(--text-color);
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 200px;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-profile img {
+    height: 35px;
+    border-radius: 50%;
+}
+
+.toggle-menu {
+    background: none;
+    border: none;
+    color: var(--sidebar-color);
+    font-size: 24px;
+    cursor: pointer;
+    transition: var(--trans-02);
+}
+
+.toggle-menu:hover {
+    color: var(--primary-color-light);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header.navbar {
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on the height of the navbar */
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active a {
+        padding: 10px;
+        text-align: center;
+        color: var(--sidebar-color);
+    }
+
+    .navbar-menu.active a:hover {
+        background-color: var(--primary-color-light);
+    }
+
+    .navbar-search {
+        display: none;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color); /* Background color for light mode */
+    color: var(--text-color); /* Text color for light mode */
+    padding: 10px;
+    position: relative;
+    z-index: 101; /* Ensure the navbar is above the sidebar */
+}
+
+/* Navbar in Dark Mode */
+body.dark .navbar .navbar-title{
+    background-color: var(--primary-color-dark); /* Adjust background color if needed */
+    color: #FFF; /* White text for dark mode */
+}
+
+body.dark .navbar a {
+    color: #FFF; /* White text color for links in dark mode */
+}
+
+body.dark .navbar .navbar-search input {
+    background-color: var(--primary-color-dark); /* Adjust background color if needed */
+    color: #FFF; /* White text color in search input */
+    border: 1px solid #FFF; /* White border for search input */
+}
+
+body.dark .navbar .user-profile img {
+    border: 2px solid #FFF; /* Optional: white border for user profile image */
+}
+
+body.dark .navbar .toggle-menu i {
+    color: #FFF; /* White color for menu toggle icon */
+}
+
+
 /* ===============================DASHBAORD DESIGN CUSTOM====================================== */
+/* For mobile view */
+/* Ensure the toggle button is fixed at the bottom-right corner */
+.toggle-menu-header {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 200; /* Ensure it's above other elements */
+}
+
+/* Hide header off-screen */
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Animation for hiding and showing */
+.header-transition {
+    transition: transform 0.3s ease-in-out;
+}

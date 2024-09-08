@@ -22,3 +22,17 @@ modeSwitch.addEventListener("click",()=>{
         modeText.innerText="Dark Mode"
     }
 });
+
+// DSDSA
+const toggleHeaderButton = document.querySelector(".toggle-menu-header");
+const header = document.querySelector(".navbar");
+
+toggleHeaderButton.addEventListener("click", () => {
+    if (header.classList.contains("header-hidden")) {
+        header.classList.remove("header-hidden");
+    } else {
+        header.classList.add("header-hidden");
+    }
+});
+
+// SDASD
